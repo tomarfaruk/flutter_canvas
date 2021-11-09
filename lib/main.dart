@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'custom_background_scroll_page/custom_background_page.dart';
+import 'furniture_app/furniture_app.dart';
 import 'image_canvas/image_canvas.dart';
 
 void main() {
@@ -38,6 +40,20 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => ImageCanvasScreen()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('CustomBackgroundPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => CustomBackgroundPage()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('FurnitureAppPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => FurnitureAppPage()));
               },
             )
           ],
