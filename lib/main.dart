@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'custom_background_scroll_page/custom_background_page.dart';
+import 'custom_path_clip/custom_path_clip.dart';
 import 'furniture_app/furniture_app.dart';
 import 'image_canvas/image_canvas.dart';
 import 'paint_canves/custom_paint_page.dart';
@@ -63,7 +64,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => CustomPaintPage()));
               },
-            )
+            ),
+            ElevatedButton(
+              child: Text('CustomPathClipPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => CustomPathClipPage()));
+              },
+            ),
           ],
         ),
       ),
