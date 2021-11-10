@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'custom_background_scroll_page/custom_background_page.dart';
 import 'furniture_app/furniture_app.dart';
 import 'image_canvas/image_canvas.dart';
+import 'paint_canves/custom_paint_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -54,6 +55,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => FurnitureAppPage()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('CustomPaintPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => CustomPaintPage()));
               },
             )
           ],
