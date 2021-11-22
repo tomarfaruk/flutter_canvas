@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-
+import 'package:get/get.dart';
+import 'bottomTextField.dart';
 import 'custom_background_scroll_page/custom_background_page.dart';
+import 'custom_canvus_line_chart/canvus_line_chart.dart';
 import 'custom_path_clip/custom_path_clip.dart';
 import 'furniture_app/furniture_app.dart';
 import 'image_canvas/image_canvas.dart';
+import 'miniplayer/mini_player_page.dart';
 import 'paint_canves/custom_paint_page.dart';
 
 void main() {
@@ -13,7 +16,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Canvas Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: MyHomePage(),
@@ -70,6 +73,27 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => CustomPathClipPage()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('CanvusLineChart'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => CanvusLineChart()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('MiniPlayer'),
+              onPressed: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => MiniPlayer()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('BottomTextField'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => BottomTextField()));
               },
             ),
           ],
