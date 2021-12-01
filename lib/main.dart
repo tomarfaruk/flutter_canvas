@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'backgournd_task/background_file_upload.dart';
+import 'border_animtaion/border_animation.dart';
 import 'bottomTextField.dart';
 import 'custom_background_scroll_page/custom_background_page.dart';
 import 'custom_canvus_line_chart/canvus_line_chart.dart';
@@ -8,8 +11,15 @@ import 'furniture_app/furniture_app.dart';
 import 'image_canvas/image_canvas.dart';
 import 'miniplayer/mini_player_page.dart';
 import 'paint_canves/custom_paint_page.dart';
+import 'social_auth/facebook_auth_page.dart';
+import 'social_auth/google_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp();
+
   runApp(MyApp());
 }
 
@@ -94,6 +104,34 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => BottomTextField()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('BackGroundFileUpload'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => BackGroundFileUpload()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('BorderAnimationPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => BorderAnimationPage()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('GoogleAuthPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => GoogleAuthPage()));
+              },
+            ),
+            ElevatedButton(
+              child: Text('FacebookAuthPage'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => FacebookAuthPage()));
               },
             ),
           ],

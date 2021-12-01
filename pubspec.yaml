@@ -16,6 +16,13 @@ dependencies:
 
   get: any
   miniplayer: ^1.0.1
+  flutter_uploader: ^3.0.0-beta.3
+
+  google_sign_in: ^5.2.1
+  flutter_facebook_auth: ^3.5.6+1
+  firebase_auth: ^3.2.0
+  auth_buttons: ^2.0.2
+  cached_network_image: ^3.2.0
 
 dev_dependencies:
   flutter_test:
